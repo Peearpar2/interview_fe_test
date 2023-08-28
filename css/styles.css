@@ -9,15 +9,71 @@ body {
 
 /* nav */
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     nav ul {
-        margin-left: 10% !important;
+        margin-left: 0 !important;
+        align-items: start !important;
+    }
+
+    nav li {
+        margin-top: 10px;
+    }
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        margin-left: 20% !important;
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 770px) {
+    .slide-detail-content {
+        width: 80% !important;
+    }
+
+    .section-2 {
+        flex-direction: column !important;
+    }
+
+    .card-sec2 {
+        min-width: 300px !important;
+        min-height: 300px !important;
+        margin-top: 4%;
+    }
+
+    .sec-3-card img {
+        width: 100%;
+    }
+
+    .sec-3-card {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .group-footer-nav {
+        flex-direction: column !important;
+        margin-left: 10% !important;
+        width: auto !important;
+    }
+}
+
+@media (max-width: 550px) {
     nav ul {
         margin-left: 0% !important;
+    }
+
+    nav {
+        padding: 30px 20px 30px 20px !important;
+    }
+}
+
+@media (min-width: 550px) {
+    nav ul {
+        margin-left: 0% !important;
+    }
+
+    nav {
+        padding: 30px 80px 30px 80px !important;
     }
 }
 
@@ -26,7 +82,6 @@ nav {
     background-color: white;
     display: flex;
     align-items: center;
-    padding: 30px 80px 30px 80px;
     font-size: 0.8rem;
 }
 
@@ -44,7 +99,6 @@ nav ul {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-left: 20vw;
     transition: margin-left 0.3s ease;
     margin-bottom: 0;
     align-items: center;
@@ -84,12 +138,13 @@ nav ul li {
 .main-content {
     background-image: url('../assets/imgs/main_bg.png');
     width: 100%;
-    height: 600px;
+    height: fit-content;
     background-position: 25% 75%;
     /* X and Y percentage values */
     background-size: cover;
     padding-top: 10%;
     padding-left: 14%;
+    padding-bottom: min(10%, 5rem);
 }
 
 .slide-detail-content {
@@ -98,7 +153,7 @@ nav ul li {
 
 /* text */
 .big-text {
-    font-size: 5rem;
+    font-size: min(10vw, 5rem);
 }
 
 /* color */
@@ -141,6 +196,8 @@ nav ul li {
     background-size: cover;
     width: min(20vw, 300px);
     height: min(20vw, 300px);
+    min-width: 200px;
+    min-height: 200px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -189,11 +246,13 @@ nav ul li {
     border: 0;
     font-size: 0.8rem;
     letter-spacing: 0.2rem;
+    margin-top: 2%;
 }
 
 .group-btn {
     display: flex;
     gap: 2%;
+    flex-wrap: wrap;
 }
 
 .sec-3-card {
@@ -299,7 +358,7 @@ footer a {
 aside {
     position: fixed;
     left: 0;
-    top: 40%;
+    top: 35%;
 }
 
 .side-fixed-menu {
